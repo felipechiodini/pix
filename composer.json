@@ -1,0 +1,19 @@
+{
+    "name": "liveoficial/pix",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LiveOficial\\Pix\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felipe Bona",
+            "email": "felipechiodinibona@hotmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^8.83",
+        "illuminate/http": "^8.83"
+    }
+}
