@@ -46,11 +46,11 @@ class PixService
 
     private function generateToken(): string
     {
-        $clientId = $this->config['pix.client_id'];
-        $clientSecret = $this->config['pix.client_secret'];
+        $clientId = $this->config['client_id'];
+        $clientSecret = $this->config['client_secret'];
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->config['pix.url_login']);
+        curl_setopt($ch, CURLOPT_URL, $this->config['url_login']);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials&client_id={$clientId}&client_secret={$clientSecret}");
