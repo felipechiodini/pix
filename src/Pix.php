@@ -4,7 +4,7 @@ namespace LiveOficial\Pix;
 
 use Illuminate\Support\Facades\Facade;
 
-class PixFacade extends Facade
+class Pix extends Facade
 {
     public static function getFacadeAccessor()
     {

@@ -8,11 +8,9 @@ class ServiceProvider extends SupportServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(PixService::class, function ($app) {
+        $this->app->singleton(\LiveOficial\Pix\PixService::class, function ($app) {
             $config = $app->make('config')->get('pix');
-            $receiver = new Receiver($config);
-            $api = new Api($receiver);
-            return new PixService($api);
+            return new \LiveOficial\Pix\PixService($config);
         });
     }
 
